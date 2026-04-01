@@ -50,16 +50,16 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/projects/project-01/main.png",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  title: `Shaker Mahmoud | Mirai Projects`,
+  description: `Mirai projects and case studies by ${person.name}`,
   headline: <>Developer by craft, Hacker by curiosity</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Mirai Case Studies</strong>{" "}
+        <strong className="ml-4">Projects</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured case study
@@ -236,9 +236,9 @@ const about: About = {
 
 const work: Work = {
   path: "/work",
-  label: "Case Studies",
-  title: "Mirai Case Studies",
-  description: `Mirai case studies by ${person.name}`,
+  label: "Projects",
+  title: "Projects",
+  description: `Mirai projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/work/projects
   // The work section now highlights the Mirai case study only
 };
