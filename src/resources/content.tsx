@@ -59,14 +59,14 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Cybersecurity</strong>{" "}
+        <strong className="ml-4">Mirai Case Studies</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured expertise
+          Featured case study
         </Text>
       </Row>
     ),
-    href: "/work/cybersecurity-projects",
+    href: "/work/mirai-case-studies",
   },
   subline: (
     <>
@@ -236,11 +236,11 @@ const about: About = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  label: "Case Studies",
+  title: "Mirai Case Studies",
+  description: `Mirai case studies by ${person.name}`,
+  // Create new project pages by adding a new .mdx file to app/work/projects
+  // The work section now highlights the Mirai case study only
 };
 
 export { person, social, newsletter, home, about, work };
