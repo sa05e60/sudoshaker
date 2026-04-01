@@ -1,21 +1,21 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Shaker",
+  lastName: "Mahmoud",
+  name: `Shaker Mahmoud`,
+  role: "Developer & Security Enthusiast",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "sudoshaker@example.com",
+  location: "Iraq, Baghdad" as Person["location"], // display label only
+  languages: ["English", "Arabic"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
   display: true,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Weekly insights on cybersecurity, CTF challenges, and development tips</>,
 };
 
 const social: Social = [
@@ -25,25 +25,19 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/drengir1",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.instagram.com/sudoshaker/",
     essential: true,
   },
   {
@@ -60,23 +54,23 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Developer by craft, Hacker by curiosity</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Cybersecurity</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Featured expertise
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/cybersecurity-projects",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm {person.firstName}, a passionate developer and security researcher. NCSE 2025 Finalist and HTB Top 100 CTF participant. ITU Certified Trainer and AFDE member.
 </>
   ),
 };
@@ -85,7 +79,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from Iraq`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -95,16 +89,16 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://www.instagram.com/sudoshaker/",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Shaker is a developer and cybersecurity enthusiast dedicated to building secure applications
+        and sharing knowledge in the security community. With expertise in CTF competitions, ethical hacking,
+        and software development, he combines practical skills with a passion for continuous learning and innovation.
       </>
     ),
   },
@@ -113,17 +107,17 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Independent Security Researcher",
+        timeframe: "2024 - Present",
+        role: "Developer & Cybersecurity Trainer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            NCSE 2025 Finalist - Recognized for exceptional performance in cybersecurity examinations
+            and demonstrated expertise in security practices.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            HTB University CTF 2025 Top 100 - Ranked among top 100 participants in HackTheBox
+            Capture The Flag competitions, showcasing advanced hacking and problem-solving skills.
           </>,
         ],
         images: [
@@ -137,17 +131,17 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "AFDE (Arab Federation for Digital Economy)",
+        timeframe: "2023 - Present",
+        role: "Member & Certified Trainer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            ITU Certified Trainer - Certified by International Telecommunication Union to deliver
+            training programs on cybersecurity and technology best practices.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Active member contributing to digital economy initiatives and mentoring emerging
+            developers in cybersecurity principles and ethical hacking.
           </>,
         ],
         images: [],
@@ -156,15 +150,19 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Certifications & Training",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "ITU (International Telecommunication Union)",
+        description: <>Certified Trainer in Cybersecurity and Technology Excellence.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "NCSE (National Cybersecurity Examination)",
+        description: <>2025 Finalist - Demonstrated advanced expertise in cybersecurity practices.</>,
+      },
+      {
+        name: "HackTheBox Academy",
+        description: <>Top 100 participant in CTF competitions, continuous skill development in ethical hacking.</>,
       },
     ],
   },
@@ -173,14 +171,18 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Cybersecurity & Ethical Hacking",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Expert in penetration testing, vulnerability assessment, and secure code review. Active CTF competitor.</>
         ),
         tags: [
           {
-            name: "Figma",
+            name: "Penetration Testing",
             icon: "figma",
+          },
+          {
+            name: "Ethical Hacking",
+            icon: "javascript",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -200,9 +202,9 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "Software Development",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Building secure applications with modern frameworks and implementing security best practices.</>
         ),
         tags: [
           {
@@ -210,11 +212,11 @@ const about: About = {
             icon: "javascript",
           },
           {
-            name: "Next.js",
+            name: "TypeScript",
             icon: "nextjs",
           },
           {
-            name: "Supabase",
+            name: "Security",
             icon: "supabase",
           },
         ],
@@ -232,15 +234,6 @@ const about: About = {
   },
 };
 
-const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
-};
-
 const work: Work = {
   path: "/work",
   label: "Work",
@@ -250,55 +243,4 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
-};
-
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, work };

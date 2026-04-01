@@ -1,45 +1,53 @@
 ---
-title: "Building Once UI, a Customizable Design System"
-publishedAt: "2024-04-08"
-summary: "Development of a flexible and highly customizable design system using Next.js for front-end and Figma for design collaboration."
+title: "Mirai: Artifact Constraints, Refinement, and Version History"
+publishedAt: "2026-04-02"
+summary: "Centralized artifact constraints, deterministic validators, revision lineage, and export flows for slides, reports, quizzes, and flashcards."
 images:
   - "/images/projects/project-01/cover-01.jpg"
   - "/images/projects/project-01/cover-02.jpg"
   - "/images/projects/project-01/cover-03.jpg"
-  - "/images/projects/project-01/cover-04.jpg"
+  - "/images/projects/project-01/image-02.jpg"
 team:
-  - name: "Selene Yu"
-    role: "Software Engineer"
+  - name: "Shaker Mahmoud"
+    role: "Product Owner"
     avatar: "/images/avatar.jpg"
-    linkedIn: "https://www.linkedin.com/company/once-ui/"
-  - name: "Lorant One"
-    role: "Design Engineer"
-    avatar: "/images/projects/project-01/avatar-01.jpg"
-    linkedIn: "https://www.linkedin.com/company/once-ui/"
+    linkedIn: "https://www.linkedin.com/"
 ---
 
 ## Overview
 
-Development of a flexible and highly customizable design system using Next.js for front-end and Figma for design collaboration.
+Mirai’s artifact system keeps generation controlled and predictable. Planning is deterministic and cheap, validators normalize output, and exports never call the model.
 
-## Key Features
+## Major Product Work
 
-- **Component Library**: Built a set of modular, reusable UI components using React and styled-components in Next.js, focusing on accessibility and responsiveness.
-- **Theming and Customization**: Integrated a theming system that allows easy switching and customization of color palettes, typography, and layout styles using CSS variables and Figma tokens.
-- **Figma Integration**: Collaborated closely with designers by setting up a shared design library in Figma. This library was synchronized with the codebase, ensuring design handoffs were seamless and that design tokens remained consistent across both platforms.
-- **Documentation and Usage Guidelines**: Developed comprehensive documentation with Storybook to showcase components, usage patterns, and best practices, ensuring the design system is easy to adopt by other teams.
+- added centralized artifact constraints and deterministic validators for `slides`, `report`, `quiz`, and `flashcards`
+- improved artifact quality without default multi-pass generation
+- added artifact revision lineage, refine actions, version history, compare, and restore
+- added deterministic exports:
+  - slides -> `pptx`
+  - reports -> `pdf`
+  - flashcards -> `csv` and `tsv`
+- added concept-check events and learning progression snapshots
+- fed progression state into adaptive teaching policy generation
+- strengthened recency weighting in behavioral and linguistic scoring
+- added configurable artifact quotas, rate limiting, cooldowns, repeated-request protection, and revision caps
 
-## Technologies Used
+## Export Formats
 
-- **Next.js**: For fast, server-rendered React applications.
-- **Figma**: For creating and managing design assets and prototypes.
-- **Styled-Components**: For styling React components with a modular, themable approach.
-- **Storybook**: For building an interactive, documented component library.
+- slides: `pptx`, `md`
+- report: `pdf`, `md`
+- flashcards: `csv`, `tsv`, `md`
+- quiz: `md`
 
-## Challenges and Learnings
+## Usage Control
 
-One key challenge was balancing the need for flexibility with the desire to maintain design consistency. The solution involved creating well-defined design tokens and establishing clear guidelines for when and how components could be customized. Additionally, setting up effective collaboration workflows between designers and developers using Figma and Git was a learning experience that greatly improved the process.
+- per-user daily and weekly artifact quotas
+- short-window generation/refinement/export rate limits
+- repeated-request abuse protection
+- revision depth caps
+- per-artifact cooldowns
+- output-size and item-count limits by artifact type
 
 ## Outcome
 
-The design system is now actively used across multiple projects, leading to faster development cycles, fewer design inconsistencies, and improved collaboration between design and development teams. It has become a foundation for scaling our products efficiently while ensuring a cohesive user experience.
+Mirai now supports a bounded artifact workflow that is predictable, cheap, and easier to reason about in production.
